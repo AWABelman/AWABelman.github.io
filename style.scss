@@ -24,11 +24,14 @@ body {
 }
 
 .container {
-  background: $favRed;
+  background: #fff;
   margin: 0 auto;
   max-width: 740px;
   padding: 0 10px;
   width: 100%;
+}
+.container header{
+  background: $favRed;	
 }
 
 h1, h2, h3, h4, h5, h6 {
