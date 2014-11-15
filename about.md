@@ -6,9 +6,10 @@ permalink: /about/
 
 D.W. aka Deadman Walking, or Dwyane Wade, or Dream Weaver, or ...
 
-### GEEK, 
+### GEEK, Programmer, Miami Heat fan
 
-A place to include any other types of information that you'd like to include about yourself. 
+爱编程，爱折腾，爱算法，爱学习，喜欢一直在学习的状态。
+不必多说，唯有一句 Stay hubgry, stay foolish.
 
 ### Contact me
 
