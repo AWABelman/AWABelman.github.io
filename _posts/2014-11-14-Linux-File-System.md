@@ -1,6 +1,6 @@
 ---
-layout:post
-title:Linux文件系统基础
+layout: post
+title: Linux文件系统基础
 ---
 
 ## 鸟哥的Linux私房菜学习笔记
