@@ -14,13 +14,13 @@ title: Linux文件系统基础
 
 ## Ext2文件##
 
-## super block
+### super block
 记录整体信息,inode,block的总量 使用量
 
-## inode
+### inode
 一个文件对应一个inode,里面同时记录用于了存储文件内容的block号码
 
-## block
+### block
 用于存储文件的内容,一个文件可能对应多个block
 
 >和FAT文件格式的对比
