@@ -11,7 +11,7 @@ title: Linux文件系统基础
 ----
 ****
 文件格式化:确定文件在硬盘中存储的格式,比如
-# Ext2文件
+##Ext2文件##
 ##super block
 记录整体信息,inode,block的总量 使用量
 ##inode
@@ -24,9 +24,9 @@ FAT文件block的存储是串成一条链的,像链表一样,要找的文件的�
 Ext2文件的block编号都存在inode里面了,像数组一样,只要有inode的地址就可以轻松找到所有的文件内容
 
 
-##inode容量有限,如何存储较多的block编号
+##inode容量有限,如何存储较多的block编号##
 分层,12个直接指向,1个间接指向(指向一个block,该block里面存的是其他block的编号),1个双间接指向,1个三间接指向
-#Ext2用于目录
+##Ext2用于目录##
 inode记录文件夹(目录)的权限属性,以及文件夹(目录)对应的block编号
 block记录*该目录下文件名和该文件名占用的inode号码数据*
 	类似于这样,`map<string,string>`,前一个string是文件名,后一个是对应的_inode_编号
