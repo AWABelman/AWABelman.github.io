@@ -19,8 +19,9 @@ html {
 
 body {
   background: url('http://d-w-.github.io/images/checker.png');
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
+  font: 18px/1.4 ;
+  color: #080809;
+  font-family: Georgia, Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -33,8 +34,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
+  font-family: Georgia,Arial, Helvetica, sans-serif;
+  color: #080809;
   font-weight: bold;
   
   line-height: 1.7;
@@ -265,6 +266,10 @@ nav {
   .read-more {
     text-transform: uppercase;
     font-size: 15px;
+  }
+  code{
+  color: #1C3B72;
+  font-size:15px;
   }
 }
 
