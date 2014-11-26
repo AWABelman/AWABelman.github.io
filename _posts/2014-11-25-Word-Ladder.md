@@ -1,7 +1,7 @@
 ---
 layout: default
 title: LeetCode上面的WordLadder总结
-
+---
 按通过率来说,WordLadder应该是Leetcode上面最难的一道题了
 其中的第二道我提交了8次才成功,多数原因是TLE,这实在令人沮丧
 
