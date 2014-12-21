@@ -24,12 +24,14 @@ title: LeetCode上面的Distinct Subsequences总结
 
 ## 2.解题思路 ##  
 这道题很明显是一道DP,作为一个初学者,我首先想到了最长公共子串  
-`
+```
+
 if(s1[i] == s2[i])
     dp[i][j] = dp[i-1][j-1]+1;
 else
     dp[i][j] = max(dp[i-1][j],dp[i][j-1]);
-`
+
+```  
 可惜和这题没什么关系  
 DP很重要的是观察前后元素的关系,在这道题目中,如果用M*N的space来存储计算结果,其中**dp[i][j]**代表了**T[0,i]**中包含的等于**T[0,j]**的子串的数目.  
 重点就是得到**dp[i][j]**和前面的值之间的关系,我就先画了一张二维数组的表  
@@ -43,12 +45,12 @@ i 0 0 0 0 0 0 3 1
 t 0 0 0 0 0 0 0 3  
 表中的数值都是人工计算出来的,这里的重点是**b重复了3次的那个地方**,再找个重复多次的例子看了一下,发现了规律,(对于一个初学者直接写出递推式实在太困难,这样找规律的方法更容易理解一些)
 
-{% hightlight c++ %}
+```  
 if(s[i] == t[j])
     dp[i][j] = dp[i][j-1]+dp[i-1][j-1];
 else
     dp[i][j] = dp[i][j-1];
-{% endhighlight %}
+```  
 
 这些代码的**数学解释**就是:
 当s[i]和t[j]匹配的时候
@@ -59,7 +61,7 @@ else
 
 ## 3.代码实现 ##
 
-{% highlight c++ %}
+```  
 class Solution {
 public:
     int numDistinct(string S, string T) {
@@ -91,7 +93,7 @@ public:
         return dp[T.length()][S.length()];
     }
 };
-{% endhighlight %}
+```  
 
 ## 3.代码优化 ##
 
@@ -104,7 +106,8 @@ public:
 
 具体是这样的
 
-{% highlight c++ %}
+```
+
     vector<int> path(m+1, 0);
     path[0] = 1;            // initial condition
 
@@ -114,4 +117,5 @@ public:
             path[i] = path[i] + (T[i-1] == S[j-1] ? path[i-1] : 0);
         }
     }
-{% endhighlight %}
+
+```  
