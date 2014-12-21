@@ -42,12 +42,14 @@ b 0 0 0 0 1 3 3 3
 i 0 0 0 0 0 0 3 1  
 t 0 0 0 0 0 0 0 3  
 表中的数值都是人工计算出来的,这里的重点是**b重复了3次的那个地方**,再找个重复多次的例子看了一下,发现了规律,(对于一个初学者直接写出递推式实在太困难,这样找规律的方法更容易理解一些)
-```
+
+{% hightlight c++ %}
 if(s[i] == t[j])
     dp[i][j] = dp[i][j-1]+dp[i-1][j-1];
 else
     dp[i][j] = dp[i][j-1];
-```
+{% endhighlight %}
+
 这些代码的**数学解释**就是:
 当s[i]和t[j]匹配的时候
 对应的值就是以s[i]结尾的子串的个数和不以s[i]结尾的子串的个数的和
@@ -57,7 +59,7 @@ else
 
 ## 3.代码实现 ##
 
-`
+{% highlight c++ %}
 class Solution {
 public:
     int numDistinct(string S, string T) {
@@ -89,7 +91,7 @@ public:
         return dp[T.length()][S.length()];
     }
 };
-`
+{% endhighlight %}
 
 ## 3.代码优化 ##
 
@@ -102,7 +104,7 @@ public:
 
 具体是这样的
 
-`
+{% highlight c++ %}
     vector<int> path(m+1, 0);
     path[0] = 1;            // initial condition
 
@@ -112,4 +114,4 @@ public:
             path[i] = path[i] + (T[i-1] == S[j-1] ? path[i-1] : 0);
         }
     }
-`
+{% endhighlight %}
