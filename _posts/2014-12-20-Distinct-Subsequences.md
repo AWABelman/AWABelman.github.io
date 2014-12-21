@@ -22,12 +22,12 @@ title: LeetCode上面的Distinct Subsequences总结
 
 ## 2.解题思路 ##
 这道题很明显是一道DP,作为一个初学者,我首先想到了最长公共子串
-```
+`
 if(s1[i] == s2[i])
     dp[i][j] = dp[i-1][j-1]+1;
 else
     dp[i][j] = max(dp[i-1][j],dp[i][j-1]);
-```
+`
 可惜和这题没什么关系
 DP很重要的是观察前后元素的关系,在这道题目中,如果用M*N的space来存储计算结果,其中**dp[i][j]**代表了**T[0,i]**中包含的等于**T[0,j]**的子串的数目.
 重点就是得到**dp[i][j]**和前面的值之间的关系,我就先画了一张二维数组的表
@@ -54,7 +54,7 @@ else
 直接等于上一个就好了..
 
 ## 3.代码实现 ##
-```
+`
 class Solution {
 public:
     int numDistinct(string S, string T) {
@@ -86,8 +86,8 @@ public:
         return dp[T.length()][S.length()];
     }
 };
-```
-## 3.代码优化 ##
+`
+## 4.代码优化 ##
 
 0.我的代码一开始有一个比较大的问题,就是没对数组初始化..后来进行了修改
 
@@ -97,7 +97,7 @@ public:
 2. 比较重要的一个优化,leetcode论坛上面一个大牛的优化,将空间复杂度降到了O(n)
 
 具体是这样的
-```
+`
     vector<int> path(m+1, 0);
     path[0] = 1;            // initial condition
 
@@ -107,4 +107,4 @@ public:
             path[i] = path[i] + (T[i-1] == S[j-1] ? path[i-1] : 0);
         }
     }
-```
+`
