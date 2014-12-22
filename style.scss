@@ -209,14 +209,17 @@ img {
 }
 
 nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  //float: right;
+  margin: 23px;
+  //margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue; 
   font-size: 18px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff4f02), color-stop(1, #8f2c00)); 
   
   @include mobile {
     float: none;
-    margin-top: 9px;
+    margin: 23px;
+    //margin-top: 9px;
     display: block;
     font-size: 16px;
   }
