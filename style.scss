@@ -215,6 +215,7 @@ nav {
   font-family: $helveticaNeue; 
   font-size: 18px;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff4f02), color-stop(1, #8f2c00)); 
+  display: block;
   
   @include mobile {
     float: none;
