@@ -24,13 +24,6 @@ body {
   font-family: Georgia, Arial, Helvetica, sans-serif;
 }
 
-.whole{
-  margin-top: 64px;
-  @include mobile {
-    margin-top: 0px;
-  }
-}
-
 .container {
   margin: 0 auto;
   max-width: 740px;
