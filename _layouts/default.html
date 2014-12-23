@@ -23,13 +23,17 @@
         var scrollTop = 0;
         window.onscroll = function(){
           var itNav = document.getElementsByTagName('nav')[0];
+          var itMain = document.getElementById('main');
           scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
           if(scrollTop < 110){
             //itNav.style.position = 'fixed';
-            itNav.className = ''; 
+            itNav.className = '';
+            itMain.className = 'container';
           }
           else{
             itNav.className = 'fixed-nav';
+            //document.getElementById("main").style.marginTop="64px";
+            itMain.className = 'container fixed-nav-main';
           };
         };
       }
