@@ -207,7 +207,11 @@ img {
     margin: 3px 0;
   }
 }
-
+.fixed-nav{
+  position: fixed;
+  top:0px;
+  left:0px;
+}
 nav {
   //float: right;
   padding: 23px;
