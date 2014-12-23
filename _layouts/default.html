@@ -21,8 +21,8 @@
       window.onload = init();
       function init(){
         var scrollTop = 0;
-        var itNav = document.getElementsByTagName('nav')[0];
         window.onscroll = function(){alert(itNav);
+          var itNav = document.getElementsByTagName('nav')[0];
           scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
           if(scrollTop > 110){
             itNav.style.position = 'fixed';
