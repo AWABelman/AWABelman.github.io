@@ -23,7 +23,7 @@
         var scrollTop = 0;
         var itNav = document.getElementsByTagName('nav');
         window.onscroll = function(){
-          scrollTop = document.documentElement.scrollTop || document.body.scrollTop;alert(itNav);
+          scrollTop = document.documentElement.scrollTop || document.body.scrollTop;alert(itNav[0]);
           if(scrollTop > 110){
             itNav.style.position = 'fixed';
           } 
