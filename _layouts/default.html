@@ -22,10 +22,12 @@
       function init(){
         var scrollTop = 0;
         var itNav = document.getElementsByTagName('nav');
-        scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if(scrollTop == 110){
-          itNav.style.position = 'fixed';
-        }
+        window.onscroll = function(){
+          scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+          if(scrollTop == 110){
+            itNav.style.position = 'fixed';
+          } 
+        };
       }
     </script>
 
