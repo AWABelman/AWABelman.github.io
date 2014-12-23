@@ -211,6 +211,13 @@ img {
   position: fixed;
   top:0px;
   left:0px;
+  @include mobile {
+  }
+}
+.fixed-nav-main{
+  margin-top: 64px;
+  @include mobile {
+  }	
 }
 nav {
   //float: right;
