@@ -21,12 +21,16 @@
       window.onload = init();
       function init(){
         var scrollTop = 0;
-        window.onscroll = function(){alert(itNav);
+        window.onscroll = function(){
           var itNav = document.getElementsByTagName('nav')[0];
           scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-          if(scrollTop > 110){
-            itNav.style.position = 'fixed';
-          } 
+          if(scrollTop < 110){
+            //itNav.style.position = 'fixed';
+            itNav.className = ''; 
+          }
+          else{
+            itNav.className = 'fixed-nav';
+          };
         };
       }
     </script>
