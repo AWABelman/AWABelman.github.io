@@ -217,9 +217,7 @@ img {
   opacity: 1;
 }
 #list{
-  position: fixed;
-  top: 191px;
-  left: 0px;
+  width: auto;
   background: $favRed;
   border-radius: 0px 0px 10px 10px;
   @include mobile {
@@ -235,6 +233,8 @@ img {
   }
 }
 #list.fixed-nav-list{
+  position: fixed;
+  left: 0px;
   top: 64px;
 }
 .fixed-nav-main{
