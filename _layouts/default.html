@@ -24,16 +24,19 @@
         window.onscroll = function(){
           var itNav = document.getElementsByTagName('nav')[0];
           var itMain = document.getElementById('main');
+          var itList = document.getElementById('list');
           scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
           if(scrollTop < 110){
             //itNav.style.position = 'fixed';
             itNav.className = '';
             itMain.className = 'container';
+            itList.className = '';
           }
           else{
             itNav.className = 'fixed-nav';
             //document.getElementById("main").style.marginTop="64px";
             itMain.className = 'container fixed-nav-main';
+            itList.className = 'fixed-nav-list';
           };
         };
       }
@@ -57,7 +60,7 @@
       </div>
       <nav>
         <span id="btn-list"><img src="/images/list.png" alt="list"></span>
-        <div class="list">
+        <div id="list">
           {% for post in site.posts %}
               <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
           {% endfor %}
