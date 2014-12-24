@@ -220,8 +220,11 @@ img {
   width: auto;
   background: $favRed;
   border-radius: 0px 0px 10px 10px;
+  float: left;
+  position: relative;
+  top: -50px;
   @include mobile {
-    top: 240px;
+
   }
 }
 .fixed-nav{
@@ -235,7 +238,7 @@ img {
 #list.fixed-nav-list{
   position: fixed;
   left: 0px;
-  top: 64px;
+  top: 81px;
 }
 .fixed-nav-main{
   margin-top: 114px;
