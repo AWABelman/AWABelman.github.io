@@ -221,7 +221,7 @@ img {
   top: 191px;
   left: 0px;
   background: $favRed;
-  border: 0px 0px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
   @include mobile {
     top: 240px;
   }
