@@ -74,7 +74,7 @@
         <a href="{{ site.baseurl }}/">Blog</a>
         <a href="{{ site.baseurl }}/about">About</a>
       </nav> 
-      <div id="list">
+      <div id="list" style="visibility:hidden;">
         {% for post in site.posts %}
             <h5>
             <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
