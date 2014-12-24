@@ -231,10 +231,15 @@ img {
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
-
+    font-family: Microsoft Yahei,Arial;
     @include mobile {
       margin: 0 10px;
     }
+  }
+  span{
+    color: rgb(201, 201, 201);
+    font-style: italic;
+    font-size: xx-small;
   }
 }
 .fixed-nav{
