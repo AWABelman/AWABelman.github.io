@@ -221,8 +221,9 @@ img {
   background: $favRed;
   border-radius: 0px 0px 10px 10px;
   float: left;
+  padding: 0 10px;
   @include mobile {
-
+    width: 100%;
   }
 }
 .fixed-nav{
