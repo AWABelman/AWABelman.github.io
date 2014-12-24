@@ -231,7 +231,7 @@ nav {
   width: 100%;
   
   @include mobile {
-    float: none;
+    text-align: center;
     padding: 9px;
     //margin-top: 9px;
     display: block;
