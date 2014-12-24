@@ -22,7 +22,7 @@
       function init(){
         var scrollTop = 0;
         var itList = document.getElementById('list');
-        itList.style.display = 'none';
+        itList.style.visibility = 'hidden';
         window.onscroll = function(){
           var itNav = document.getElementsByTagName('nav')[0];
           var itMain = document.getElementById('main');
@@ -46,10 +46,10 @@
       function turnList(){
         var itList = document.getElementById('list');
         if(onList == 0){
-          itList.style.display = '';
+          itList.style.visibility = 'visible';
           onList = 1;
         }else{
-          itList.style.display = 'none';
+          itList.style.visibility = 'hidden';
           onList = 0;
         };
       }
