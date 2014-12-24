@@ -65,7 +65,10 @@
       </nav> 
       <div id="list">
         {% for post in site.posts %}
-            <h6><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><span>{{ post.date | date: "%B %e, %Y" }}</span></h6>
+            <h5>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <span>{{ post.date | date: "%B %e, %Y" }}</span>  
+            </h5>
         {% endfor %}
       </div>
     </div>
