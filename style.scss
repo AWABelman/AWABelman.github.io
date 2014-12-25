@@ -217,7 +217,7 @@ img {
   img:active{
     transform: rotate(450deg);
     -ms-transform: rotate(450deg);		/* IE 9 */
-    -webkit-transform: rotate(450deg);	/* Safari and Chrome */
+    //-webkit-transform: rotate(450deg);	/* Safari and Chrome */
     -o-transform: rotate(450deg);		/* Opera */
     -moz-transform: rotate(450deg);		/* Firefox */
     -webkit-animation: myfirst 5s;	/* Safari 和 Chrome */
@@ -238,8 +238,8 @@ img {
 
 @-webkit-keyframes onlist /* Safari 和 Chrome */
 {
-  from {background: red;}
-  to {background: yellow;}
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(450deg);}
 }
 
 @-o-keyframes onlist /* Opera */
