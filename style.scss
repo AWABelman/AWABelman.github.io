@@ -213,6 +213,11 @@ img {
   top: 10px;
   opacity: 0.6;
   cursor: pointer;
+  transform: rotate(450deg);
+  -ms-transform: rotate(450deg);		/* IE 9 */
+  -webkit-transform: rotate(450deg);	/* Safari and Chrome */
+  -o-transform: rotate(450deg);		/* Opera */
+  -moz-transform: rotate(450deg);		/* Firefox */
 }
 #btn-list:hover{
   opacity: 1;
