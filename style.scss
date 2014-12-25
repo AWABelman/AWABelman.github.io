@@ -214,13 +214,13 @@ img {
   opacity: 0.6;
   cursor: pointer;
   transform: rotate(450deg);
-  img:hover{
+  #img{
     //transform: rotate(450deg);
     //-ms-transform: rotate(450deg);		/* IE 9 */
     //-webkit-transform: rotate(450deg);	/* Safari and Chrome */
     //-o-transform: rotate(450deg);		/* Opera */
     //-moz-transform: rotate(450deg);		/* Firefox */
-    -webkit-animation: list 5s;	/* Safari 和 Chrome */
+    -webkit-animation: onlist 3s;	/* Safari 和 Chrome */
   }
 }
 #btn-list:hover{
