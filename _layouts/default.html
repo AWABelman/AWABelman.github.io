@@ -43,10 +43,13 @@
       var onList = 0;
       function turnList(){
         var itList = document.getElementById('list');
+        var itBtn = document.getElementById('btn-img');
         if(onList == 0){
+          itBtn.className = 'on';
           itList.style.visibility = 'visible';
           onList = 1;
         }else{
+          itBtn.className = 'off';
           itList.style.visibility = 'hidden';
           onList = 0;
         };
@@ -70,7 +73,7 @@
         </header>
       </div>
       <nav>
-        <span id="btn-list" onclick="turnList()"><img id="off" src="/images/list.png" alt="list"></span>
+        <span id="btn-list" onclick="turnList()"><img id="btn-img" src="/images/list.png" alt="list"></span>
         <a href="{{ site.baseurl }}/">Blog</a>
         <a href="{{ site.baseurl }}/about">About</a>
       </nav> 
