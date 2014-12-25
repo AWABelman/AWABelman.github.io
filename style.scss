@@ -220,10 +220,32 @@ img {
     -webkit-transform: rotate(450deg);	/* Safari and Chrome */
     -o-transform: rotate(450deg);		/* Opera */
     -moz-transform: rotate(450deg);		/* Firefox */
+    -webkit-animation: myfirst 5s;	/* Safari 和 Chrome */
   }
 }
 #btn-list:hover{
   opacity: 1;
+}
+@keyframes onlist{
+  from {background: red;}
+  to {background: yellow;}
+}
+
+@-moz-keyframes onlist /* Firefox */{
+  from {background: red;}
+  to {background: yellow;}
+}
+
+@-webkit-keyframes onlist /* Safari 和 Chrome */
+{
+  from {background: red;}
+  to {background: yellow;}
+}
+
+@-o-keyframes onlist /* Opera */
+{
+  from {background: red;}
+  to {background: yellow;}
 }
 #list{
   width: auto;
