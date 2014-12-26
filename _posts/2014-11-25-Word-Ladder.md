@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: LeetCode上面的WordLadder总结
 ---
 按通过率来说,WordLadder应该是Leetcode上面最难的一道题了
