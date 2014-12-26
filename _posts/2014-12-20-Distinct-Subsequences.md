@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: LeetCode上面的Distinct Subsequences总结
 ---
 
