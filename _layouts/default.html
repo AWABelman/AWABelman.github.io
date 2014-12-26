@@ -17,10 +17,49 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
+    <script>
+      window.onload = init();
+      function init(){
+        var scrollTop = 0;
+        window.onscroll = function(){
+          var itNav = document.getElementsByTagName('nav')[0];
+          var itMain = document.getElementById('main');
+          var itList = document.getElementById('list');
+          scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+          if(scrollTop < 110){
+            //itNav.style.position = 'fixed';
+            itNav.className = '';
+            itMain.className = 'container';
+            itList.className = '';
+          }
+          else{
+            itNav.className = 'fixed-nav';
+            //document.getElementById("main").style.marginTop="64px";
+            itMain.className = 'container fixed-nav-main';
+            itList.className = 'fixed-nav-list';
+          };
+        };
+      }
+      var onList = 0;
+      function turnList(){
+        var itList = document.getElementById('list');
+        var itBtn = document.getElementById('btn-img');
+        if(onList == 0){
+          itBtn.className = 'on';
+          itList.style.visibility = 'visible';
+          onList = 1;
+        }else{
+          itBtn.className = 'off';
+          itList.style.visibility = 'hidden';
+          onList = 0;
+        };
+      }
+    </script>
+
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
-  <body>
+  <body>  
   <div class="whole">
     <div class="wrapper-masthead">
       <div class="container">
@@ -31,12 +70,20 @@
             <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
             <p class="site-description">{{ site.description }}</p>
           </div>
-          
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
         </header>
+      </div>
+      <nav>
+        <span id="btn-list" onclick="turnList()"><img id="btn-img" src="/images/list.png" alt="list"></span>
+        <a href="{{ site.baseurl }}/">Blog</a>
+        <a href="{{ site.baseurl }}/about">About</a>
+      </nav> 
+      <div id="list" style="visibility:hidden;">
+        {% for post in site.posts %}
+            <h5>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <span>{{ post.date | date: "%B %e, %Y" }}</span>  
+            </h5>
+        {% endfor %}
       </div>
     </div>
 

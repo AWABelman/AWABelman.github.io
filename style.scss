@@ -21,7 +21,8 @@ body {
   background: url('http://d-w-.github.io/images/checker.png');
   font: 18px/1.4 ;
   color: #080809;
-  font-family: Georgia, Arial, Helvetica, sans-serif;
+  font-family: Microsoft Yahei,Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
 }
 
 .container {
@@ -34,7 +35,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia,Arial, Helvetica, sans-serif;
+  font-family: Microsoft Yahei,Arial,Helvetica, sans-serif;
   color: #080809;
   font-weight: bold;
   
@@ -207,16 +208,105 @@ img {
     margin: 3px 0;
   }
 }
+#btn-list{
+  position: relative;
+  top: 10px;
+  opacity: 0.6;
+  cursor: pointer;
+  transform: rotate(450deg);
+  .on,.off{
+    //transform: rotate(450deg);
+    //-ms-transform: rotate(450deg);		/* IE 9 */
+    //-webkit-transform: rotate(450deg);	/* Safari and Chrome */
+    //-o-transform: rotate(450deg);		/* Opera */
+    //-moz-transform: rotate(450deg);		/* Firefox */
+    -webkit-animation: onlist 3s;	/* Safari 和 Chrome */
+  }
+}
+#btn-list:hover{
+  opacity: 1;
+}
+@keyframes onlist{
+  from {background: red;}
+  to {background: yellow;}
+}
 
+@-moz-keyframes onlist /* Firefox */{
+  from {background: red;}
+  to {background: yellow;}
+}
+
+@-webkit-keyframes onlist /* Safari 和 Chrome */
+{
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(450deg);}
+}
+
+@-o-keyframes onlist /* Opera */
+{
+  from {background: red;}
+  to {background: yellow;}
+}
+#list{
+  width: auto;
+  background: $favRed;
+  border-radius: 0px 0px 10px 10px;
+  padding: 0 10px;
+  overflow-y: auto;
+  position: absolute;;
+  @include mobile {
+    width: 100%;
+  }
+  a {
+    margin-left: 20px;
+    color: $darkGray;
+    text-align: right;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-family: Microsoft Yahei,Arial;
+    @include mobile {
+      margin: 0 10px;
+    }
+  }
+  span{
+    color: rgb(201, 201, 201);
+    font-style: italic;
+    font-size: xx-small;
+    font-weight: lighter;
+  }
+}
+.fixed-nav{
+  position: fixed;
+  top:0px;
+  left:0px;
+  @include mobile {
+    position: inherit;
+  }
+}
+#list.fixed-nav-list{
+  position: fixed;
+  left: 0px;
+  top: 51px;
+}
+.fixed-nav-main{
+  margin-top: 101px;
+  @include mobile {
+    margin-top: 0px;
+  }	
+}
 nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  padding: 0px 13px 13px 13px;
+  //margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue; 
   font-size: 18px;
+  //background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff4f02), color-stop(1, #8f2c00));//gradient
+  background: $favRed;
+  width: 100%;
   
   @include mobile {
-    float: none;
-    margin-top: 9px;
+    text-align: center;
+    padding: 9px;
+    //margin-top: 9px;
     display: block;
     font-size: 16px;
   }
