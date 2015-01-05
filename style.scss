@@ -357,9 +357,17 @@ nav {
     text-transform: uppercase;
     font-size: 15px;
   }
+  pre{
+		padding: 16px;
+		overflow: auto;
+		font-size: 85%;
+		line-height: 1.45;
+		background-color: #f7f7f7;
+		border-radius: 3px;
+	}
   code{
-  color: #1C3B72;
-  font-size:15px;
+		//color: #1C3B72;
+		font-size:15px;
   }
 }
 
