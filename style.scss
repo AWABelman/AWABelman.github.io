@@ -220,7 +220,12 @@ img {
     //-webkit-transform: rotate(450deg);	/* Safari and Chrome */
     //-o-transform: rotate(450deg);		/* Opera */
     //-moz-transform: rotate(450deg);		/* Firefox */
-    -webkit-animation: onlist 3s;	/* Safari 和 Chrome */
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards;
+    animation: onlist 3s;
+    -moz-animation: onlist 3s; /* Firefox */
+    -webkit-animation: onlist 3s; /* Safari and Chrome */
+    -o-animation: onlist 3s; /* Opera */
   }
 }
 #btn-list:hover{
