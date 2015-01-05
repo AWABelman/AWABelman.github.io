@@ -213,32 +213,35 @@ img {
   top: 10px;
   opacity: 0.6;
   cursor: pointer;
-  transform: rotate(450deg);
   .on,.off{
-    //transform: rotate(450deg);
-    //-ms-transform: rotate(450deg);		/* IE 9 */
-    //-webkit-transform: rotate(450deg);	/* Safari and Chrome */
-    //-o-transform: rotate(450deg);		/* Opera */
-    //-moz-transform: rotate(450deg);		/* Firefox */
-    //animation-fill-mode:forwards;
-    //-webkit-animation-fill-mode:forwards;
-    animation: onlist 3s forwards;
-    -moz-animation: onlist 3s forwards; /* Firefox */
-    -webkit-animation: onlist 3s forwards; /* Safari and Chrome */
-    -o-animation: onlist 3s forwards; /* Opera */
+    // animation: onlist 3s forwards;
+    // -moz-animation: onlist 3s forwards; /* Firefox */
+    // -webkit-animation: onlist 3s forwards; /* Safari and Chrome */
+    // -o-animation: onlist 3s forwards; /* Opera */
+    transition: -ms-transform 2s;
+    -moz-transition: -moz-transform 2s; /* Firefox 4 */
+    -webkit-transition: -webkit-transform 2s; /* Safari and Chrome */
+    -o-transition: -o-transform 2s; /* Opera */
   }
+}
+#btn-list .tosel{
+	transform: rotate(450deg);
+	-ms-transform: rotate(450deg);
+  -moz-transform: rotate(450deg); /* Firefox 4 */
+  -webkit-transform: rotate(450deg); /* Safari and Chrome */
+  -o-transform: rotate(450deg); /* Opera */
 }
 #btn-list:hover{
   opacity: 1;
 }
 @keyframes onlist{
-  from {background: red;}
-  to {background: yellow;}
+  from {transform: rotate(0deg); -ms-transform: rotate(0deg);}
+  to {transform: rotate(450deg); -ms-transform: rotate(450deg);}
 }
 
 @-moz-keyframes onlist /* Firefox */{
-  from {background: red;}
-  to {background: yellow;}
+  from {-moz-transform: rotate(0deg);}
+  to {-moz-transform: rotate(450deg);}
 }
 
 @-webkit-keyframes onlist /* Safari 和 Chrome */
@@ -249,8 +252,8 @@ img {
 
 @-o-keyframes onlist /* Opera */
 {
-  from {background: red;}
-  to {background: yellow;}
+  from {-o-transform: rotate(0deg);}
+  to {-o-transform: rotate(450deg);}
 }
 #list{
   width: auto;
