@@ -364,6 +364,10 @@ nav {
 		line-height: 1.45;
 		background-color: #0A0909;
 		border-radius: 3px;
+		code{
+			font: 13px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+			display: inline;
+		}
 	}
   code{
 		//color: #1C3B72;
@@ -371,7 +375,7 @@ nav {
 		display: inline-block;
 		background-color: #0A0909;
 		border-radius: 2px;
-		padding: 1px;
+		padding: 2px 5px;
   }
 }
 
