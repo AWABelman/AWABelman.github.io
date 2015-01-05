@@ -46,11 +46,13 @@
         var itBtn = document.getElementById('btn-img');
         if(onList == 0){
           itBtn.className = 'on tosel';
-          itList.style.visibility = 'visible';
+          // itList.style.visibility = 'visible';
+          itList.className = 'tosell';
           onList = 1;
         }else{
           itBtn.className = 'off';
-          itList.style.visibility = 'hidden';
+          // itList.style.visibility = 'hidden';
+          itList.className = '';
           onList = 0;
         };
       }
@@ -77,7 +79,8 @@
         <a href="{{ site.baseurl }}/">Blog</a>
         <a href="{{ site.baseurl }}/about">About</a>
       </nav> 
-      <div id="list" style="visibility:hidden;">
+      <!--<div id="list" style="visibility:hidden;">-->
+      <div id="list">
         {% for post in site.posts %}
             <h5>
             <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
