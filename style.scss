@@ -263,10 +263,11 @@ img {
   overflow-y: auto;
   position: absolute;
   visibility: hidden;
-  transition: visibility 2s;
-  -moz-transition: visibility 2s; /* Firefox 4 */
-  -webkit-transition: visibility 2s; /* Safari and Chrome */
-  -o-transition: visibility 2s; /* Opera */
+  opacity: 0;
+  transition: opacity visibility 2s;
+  -moz-transition: opacity visibility 2s; /* Firefox 4 */
+  -webkit-transition: opacity visibility 2s; /* Safari and Chrome */
+  -o-transition: opacity visibility 2s; /* Opera */
   @include mobile {
     width: 100%;
   }
