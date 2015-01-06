@@ -21,6 +21,12 @@
       window.onload = init();
       function init(){
         var scrollTop = 0;
+        var w=window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+        var h=window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
         window.onscroll = function(){
           var itNav = document.getElementsByTagName('nav')[0];
           var itMain = document.getElementById('main');
@@ -31,12 +37,14 @@
             itNav.className = '';
             itMain.className = 'container';
             itList.className = '';
+            itList.style.maxHeight = h-161;
           }
           else{
             itNav.className = 'fixed-nav';
             //document.getElementById("main").style.marginTop="64px";
             itMain.className = 'container fixed-nav-main';
             itList.className = 'fixed-nav-list';
+            itList.style.maxHeight = h-51;
           };
         };
       }
