@@ -27,6 +27,7 @@
         var h=window.innerHeight
         || document.documentElement.clientHeight
         || document.body.clientHeight;
+        maxH = h;
         window.onscroll = function(){
           var itNav = document.getElementsByTagName('nav')[0];
           var itMain = document.getElementById('main');
@@ -37,14 +38,16 @@
             itNav.className = '';
             itMain.className = 'container';
             itList.className = '';
-            itList.style.maxHeight = h-161;
+            maxH = h-161;
+            itList.style.maxHeight = maxH+'px';
           }
           else{
             itNav.className = 'fixed-nav';
             //document.getElementById("main").style.marginTop="64px";
             itMain.className = 'container fixed-nav-main';
             itList.className = 'fixed-nav-list';
-            itList.style.maxHeight = h-51;
+            maxH = h-161;
+            itList.style.maxHeight = maxH+'px';
           };
         };
       }
