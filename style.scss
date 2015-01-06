@@ -302,7 +302,7 @@ img {
   left: 0px;
   top: 51px;
   @include mobile {
-    position: inherit;
+    position: absolute;
   }
 }
 .fixed-nav-main{
