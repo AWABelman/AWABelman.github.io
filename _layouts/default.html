@@ -27,7 +27,14 @@
         var h=window.innerHeight
         || document.documentElement.clientHeight
         || document.body.clientHeight;
+        var itList = document.getElementById('list');
         maxH = h;
+        if(itList.className == ''){
+          maxH = h-161;
+        }else{
+          maxH = h-51;
+        }
+        itList.style.maxHeight = maxH+'px';           
         window.onscroll = function(){
           var itNav = document.getElementsByTagName('nav')[0];
           var itMain = document.getElementById('main');
@@ -38,16 +45,12 @@
             itNav.className = '';
             itMain.className = 'container';
             itList.className = '';
-            maxH = h-161;
-            itList.style.maxHeight = maxH+'px';
           }
           else{
             itNav.className = 'fixed-nav';
             //document.getElementById("main").style.marginTop="64px";
             itMain.className = 'container fixed-nav-main';
             itList.className = 'fixed-nav-list';
-            maxH = h-161;
-            itList.style.maxHeight = maxH+'px';
           };
         };
       }
