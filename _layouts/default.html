@@ -29,12 +29,14 @@
         || document.body.clientHeight;
         var itList = document.getElementById('list');
         maxH = h;
-        if(itList.className == ''){
-          maxH = h-161;
-        }else{
-          maxH = h-51;
-        }
-        itList.style.maxHeight = maxH+'px';           
+        if(itList != null){
+          if(itList.className == ''){
+            maxH = h-161;
+          }else{
+            maxH = h-51;
+          }
+          itList.style.maxHeight = maxH+'px';
+        }           
         window.onscroll = function(){
           var itNav = document.getElementsByTagName('nav')[0];
           var itMain = document.getElementById('main');
