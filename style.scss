@@ -301,6 +301,9 @@ img {
   position: fixed;
   left: 0px;
   top: 51px;
+  @include mobile {
+    position: inherit;
+  }
 }
 .fixed-nav-main{
   margin-top: 101px;
