@@ -29,13 +29,13 @@
         || document.body.clientHeight;
         var itList = document.getElementById('list');
         maxH = h;
-        if(itList != null){
+        if(itList != null){alert();
           if(itList.className == ''){
             maxH = h-161;
           }else{
             maxH = h-51;
           }
-          itList.style.maxHeight = maxH+'px';alert(itList.style.maxHeight);
+          itList.style.maxHeight = maxH+'px';
         }           
         window.onscroll = function(){
           var itNav = document.getElementsByTagName('nav')[0];
