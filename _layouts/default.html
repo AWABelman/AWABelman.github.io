@@ -21,22 +21,6 @@
       window.onload = init();
       function init(){
         var scrollTop = 0;
-        var w=window.innerWidth
-        || document.documentElement.clientWidth
-        || document.body.clientWidth;
-        var h=window.innerHeight
-        || document.documentElement.clientHeight
-        || document.body.clientHeight;
-        var itList = document.getElementById('list');
-        maxH = h;
-        if(itList != null){alert();
-          if(itList.className == ''){
-            maxH = h-161;
-          }else{
-            maxH = h-51;
-          }
-          itList.style.maxHeight = maxH+'px';
-        }           
         window.onscroll = function(){
           var itNav = document.getElementsByTagName('nav')[0];
           var itMain = document.getElementById('main');
@@ -60,6 +44,21 @@
       function turnList(){
         var itList = document.getElementById('list');
         var itBtn = document.getElementById('btn-img');
+        var w=window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+        var h=window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+        maxH = h;
+        if(itList != null){
+          if(itList.className == ''){
+            maxH = h-161;
+          }else{
+            maxH = h-51;
+          }
+          itList.style.maxHeight = maxH+'px';alert(itList.style.maxHeight);
+        }     
         if(onList == 0){
           itBtn.className = 'on tosel';
           itList.style.opacity = 1;
